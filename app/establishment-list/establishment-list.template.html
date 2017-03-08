@@ -1,0 +1,17 @@
+<div ng-show="authorizedUser">
+<ul>
+    <li ng-repeat="item in establishments">
+        {{item.name}}
+        <button>edit</button>
+        <button>delete</button>
+    </li>
+</ul>
+<p>
+    <form ng-submit="addTask()">
+        <input ng-model="taskName">
+        <button type="submit">add task</button>
+    </form>
+</p>
+</div>
+<a ng-show="!authorizedUser" href="#!/login">you must login first</a>
+
